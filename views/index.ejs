@@ -6,6 +6,32 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <ul>
+      <% docs.forEach(function(albums){ %>
+        <li>
+          <a href="/edit/<%= albums._id %>">
+            <%= albums.name %>
+          </a>
+          <a href="/delete/<%= albums._id %>" 
+            onclick="return confirm('You monster. Sure you want to delete this album?');">
+            X
+	</a>
+        </li>
+      <% }) %>
+    </ul>
+    <hr />
+    <p><%= count %>   </p>
+        <p>
+    <%
+      for(var i=1; i <= qtdPaginas; i++) {
+          if(i !== page){
+        %>
+          <a href="/<%= i %>"><%= i %></a> | 
+          <%} else {%>
+          <%= i %> |
+    <% } }%>
+    </p>
+    <hr />
+    <a href="/new">New Album</a>
   </body>
 </html>

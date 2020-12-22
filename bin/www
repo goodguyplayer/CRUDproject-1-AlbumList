@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+global.db = require('../db');
 var app = require('../app');
 var debug = require('debug')('crudproject-1-albumlist:server');
 var http = require('http');

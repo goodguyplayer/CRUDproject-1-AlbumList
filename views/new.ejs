@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="<%= action %>" method="POST">
+      <p>Name:<input type="text" name="name" value="<%= doc.name %>" /></p>
+      <p>Artist:<input type="text" name="artist" value="<%= doc.artist %>" /></p>
+      <input type="submit" value="Save" />
+    </form>
+  </body>
+</html>
